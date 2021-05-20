@@ -1,0 +1,94 @@
+14:17:05 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+Info: Nothing to build for Bankers_Algorithm
+14:19:04 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+14:19:37 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+15:45:23 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+15:55:33 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+Info: Nothing to build for Bankers_Algorithm
+15:59:58 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+16:01:07 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+16:06:37 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+18:18:05 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+19:04:26 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+19:18:18 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+Info: Nothing to build for Bankers_Algorithm
+10:41:13 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+10:43:04 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+10:45:11 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+10:57:55 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+12:05:27 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+..\src\Bankers_Algorithm.cpp: In function 'int main()':
+..\src\Bankers_Algorithm.cpp:131:50: error: expected ';' before 'for'
+  131 |    cout << endl << "Enter requested resources:  "
+      |                                                  ^
+      |                                                  ;
+  132 |    for(int i = 0; i < m; i++)
+      |    ~~~                                            
+..\src\Bankers_Algorithm.cpp:132:19: error: 'i' was not declared in this scope
+  132 |    for(int i = 0; i < m; i++)
+      |                   ^
+12:05:46 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+12:07:12 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+15:49:13 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 
+Info: Nothing to build for Bankers_Algorithm
+Info: Nothing to build for Bankers_Algorithm
+21:26:04 **** Incremental Build of configuration Debug for project Bankers_Algorithm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bankers_Algorithm.o" "..\\src\\Bankers_Algorithm.cpp" 
+g++ -o Bankers_Algorithm.exe "src\\Bankers_Algorithm.o" 

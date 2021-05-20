@@ -1,0 +1,254 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+/* n is number of processes, m is number of resources types */
+int n, m;
+vector<int> available;
+vector<int> available2;
+vector<vector<int>> need;
+vector<vector<int>> allocation;
+
+bool is_safe(vector<int> &safe);
+void  resource_request(vector<int> request, int process);
+
+int main() {
+	int num, need_safe_or_request, requested_process;
+
+    vector<vector<int>> max;
+
+    	cout << "Enter number of processes and number of resources: ";
+    	cin >> n >> m;
+
+    	/* asking user for allocation matrix */
+		cout << "enter allocation matrix" << endl;
+		for (int i = 0; i < n; i++)
+		{
+			vector<int> row;
+
+			for (int j = 0; j < m; j++) {
+				cin >> num;
+				row.push_back(num);
+			}
+			allocation.push_back(row);
+		}
+
+		/* asking user for max matrix */
+		cout << "enter max matrix" << endl;
+		for (int i = 0; i < n; i++)
+		{
+			vector<int> row;
+
+			for (int j = 0; j < m; j++) {
+				cin >> num;
+				row.push_back(num);
+			}
+			max.push_back(row);
+		}
+
+		/* asking user for available resources vector */
+		cout << "enter available resources vector" << endl;
+		for(int i = 0; i < m; i++)
+		{
+			cin >> num;
+			available.push_back(num);
+			available2.push_back(num);
+		}
+
+		/* calculating need matrix */
+		for (int i = 0; i < n; i++)
+		{
+			vector<int> row;
+			for (int j = 0; j < m; j++)
+			{
+				num = max[i][j] - allocation[i][j];
+				row.push_back(num);
+			}
+			need.push_back(row);
+		}
+
+		/* printing need matrix */
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < m; j++)
+			{
+				cout << need[i][j] << " ";
+			}
+			cout << endl;
+
+		}
+
+		cout << "Safe State ? Yes:1 , No:0" << endl;
+		cin >> need_safe_or_request;
+		if(need_safe_or_request)
+		{
+			vector<int> safe_vector;
+			need_safe_or_request = is_safe(safe_vector);
+			if(need_safe_or_request == 0)
+			{
+				cout << "Not Safe" << endl;
+			}
+			else
+			{
+				cout << "Yes, Safe state <";
+				for(int i = 0; i < n; i++)
+				{
+					cout << "P" << safe_vector[i];
+					if(i != n - 1)
+					{
+						cout << ",";
+					}
+				}
+				cout << ">" << endl;
+			}
+		}
+
+		cout << "Request ? Yes:1 , No:0"<<endl;
+		cin >> need_safe_or_request;
+		if(need_safe_or_request)
+		{
+			cout << "Enter number of process then its request" << endl;
+			cin >> requested_process;
+			vector<int> request;
+			for(int i = 0; i < m; i++)
+			{
+				cin >> num;
+				request.push_back(num);
+			}
+			resource_request(request,  requested_process);
+		}
+
+
+
+}
+
+void  resource_request(vector<int> request, int process)
+{
+	bool requesting = true;
+	for(int i = 0; i < m; i++)
+	{
+		if(request[i] > need[process][i])
+		{
+			requesting = false;
+			break;
+		}
+	}
+	if(requesting)
+	{
+		for(int i = 0; i < m; i++)
+		{
+			if(request[i] > available[i])
+			{
+				requesting = false;
+				break;
+			}
+		}
+	}
+	else
+	{
+		cout << "Process has exceeded its maximum claim" << endl;
+		return;
+	}
+
+
+	if(requesting)
+	{
+		for(int i = 0; i < m; i++)
+		{
+			available[i] -= request[i];
+			allocation[process][i] += request[i];
+			need[process][i] -= request[i];
+		}
+		vector<int> safe_vector;
+		int safe = is_safe(safe_vector);
+		if(!safe)
+		{
+			for(int i = 0; i < m; i++)
+			{
+				available[i] += request[i];
+				allocation[process][i] -= request[i];
+				need[process][i] += request[i];
+			}
+			cout << "Request can not be granted as no safe state";
+		}
+		else
+		{
+			cout << "Yes request can be granted with safe state, Safe state <P" << process << "req,";
+			for(int i = 0; i < n; i++)
+			{
+				cout << "P" <<  safe_vector[i];
+				if(i != n - 1)
+				{
+					cout << ",";
+				}
+			}
+			cout << ">" << endl;
+		}
+	}
+	else
+		cout << "Process must wait resources not available" << endl;
+}
+
+bool is_safe(vector<int> &safe)
+{
+//	vector<int> safe;
+	bool found = true;
+	vector<int> finish(n, 0);
+	for(int i = 0; i < m; i++)
+	{
+		available[i] = available2[i];
+	}
+	while(found == true)
+	{
+		found = false;
+		for(int i = 0; i < n; i++)
+		{
+			if(finish[i] == 0)
+			{
+				found = true;
+
+				for(int j = 0; j < m; j++)
+				{
+					if(need[i][j] > available[j])
+					{
+						found = false;
+					}
+				}
+				if(found)
+				{
+					safe.push_back(i);
+					for(int j = 0; j < m; j++)
+					{
+						available[j] = available[j] + allocation[i][j];
+					}
+					finish[i] = 1;
+//					cout << i << "  ";
+				}
+			}
+		}
+	}
+
+	int x = safe.size();
+	return x;
+//	if(x == n)
+//	{
+//		cout << "Yes, Safe state <";
+//		for(int i = 0; i < n; i++)
+//		{
+//			cout << "P" << safe[i];
+//			if(i != n - 1)
+//			{
+//				cout << ",";
+//			}
+//		}
+//		cout << ">" << endl;
+//		return true;
+//	}
+//	else
+//	{
+//		cout << "Not Safe" << endl;
+//		return false;
+//	}
+
+}
