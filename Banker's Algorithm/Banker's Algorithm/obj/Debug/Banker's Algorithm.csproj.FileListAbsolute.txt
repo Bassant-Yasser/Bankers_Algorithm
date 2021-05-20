@@ -1,0 +1,9 @@
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\bin\Debug\Banker's Algorithm.exe.config
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\bin\Debug\Banker's Algorithm.exe
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\bin\Debug\Banker's Algorithm.pdb
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker's Algorithm.csprojResolveAssemblyReference.cache
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker_s_Algorithm.Form1.resources
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker_s_Algorithm.Properties.Resources.resources
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker's Algorithm.csproj.GenerateResource.Cache
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker's Algorithm.exe
+D:\Bassant\3rd CSE Second term\OS\Assignments\Banker's Algorithm\Banker's Algorithm\obj\Debug\Banker's Algorithm.pdb
